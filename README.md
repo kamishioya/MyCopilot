@@ -6,7 +6,7 @@ AI駆動開発のための `.github` フォルダテンプレートです。
 ## フォルダ構成
 
 ```
-MyCopilot/
+my-copilot/
 ├── copilot-instructions.md          # 🎯 汎用AI指示書（プロジェクト全体のルール）
 │
 ├── docs/                            # 📄 プログラム仕様書・設計書
