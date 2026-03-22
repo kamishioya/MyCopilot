@@ -1,4 +1,4 @@
-# .mygithub - 汎用 Code as Doc テンプレート
+#  汎用 Code as Doc テンプレート
 
 AI駆動開発のための `.github` フォルダテンプレートです。  
 [awesome-copilot](https://github.com/microsoft/awesome-copilot) プロジェクトのベストプラクティスを参考に構築しています。
@@ -6,7 +6,7 @@ AI駆動開発のための `.github` フォルダテンプレートです。
 ## フォルダ構成
 
 ```
-.mygithub/
+MyCopilot/
 ├── copilot-instructions.md          # 🎯 汎用AI指示書（プロジェクト全体のルール）
 │
 ├── docs/                            # 📄 プログラム仕様書・設計書
@@ -56,7 +56,7 @@ AI駆動開発のための `.github` フォルダテンプレートです。
 ## 使い方
 
 ### 1. プロジェクトにコピー
-この `.mygithub` フォルダの内容を、対象プロジェクトの `.github` フォルダとしてコピーします。
+この `MyCopilot` フォルダの内容を、対象プロジェクトの `.github` フォルダとしてコピーします。
 
 ### 2. memory-bank を初期化
 `memory-bank/projectbrief.md` にプロジェクトの概要を記入します。  
