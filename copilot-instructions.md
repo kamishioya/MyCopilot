@@ -36,6 +36,7 @@
 │   └── migrations/            # マイグレーションスクリプト
 ├── skills/                    # AIスキル定義
 │   ├── brainstorming/         # ブレインストーミング（設計探索）
+│   ├── commenting/            # コメント運用（WHY重視・日本語コメント）
 │   ├── test-driven-development/ # テスト駆動開発（TDD）
 │   ├── systematic-debugging/  # 体系的デバッグ
 │   ├── verification/          # 完了前検証
@@ -72,11 +73,11 @@
 - 新機能の設計時 → まず `skills/brainstorming/` でブレインストーミング
 - 仕様書を書くとき → `docs/spec/` のテンプレートに従う
 - 実装計画を書くとき → `docs/plan/` のテンプレートに従う
-- コード実装時 → `skills/test-driven-development/` のTDDサイクルに従う
+- コード実装時 → `skills/test-driven-development/` と `skills/commenting/` を必ず参照する
 - バグ修正時 → `skills/systematic-debugging/` の4フェーズに従う
 - 完了宣言前 → `skills/verification/` で検証を実施
 - DB変更をするとき → `db/` 配下の既存DDLとの整合性を確認する
-- コードレビュー時 → `instructions/code-review.instructions.md` のルールに従う
+- コードレビュー時 → `instructions/code-review.instructions.md` と `skills/commenting/` のチェックリストに従う
 - React実装・レビュー時 → `skills/react-performance/` のパフォーマンス最適化ルールに従う
 - UI/UX設計・レビュー時 → `skills/ui-design/` のデザインガイドラインに従う
 
@@ -91,8 +92,10 @@
 
 ### コメント規約
 - **WHY（なぜ）を書く**: コードが「何をしているか」ではなく「なぜそうしているか」を記述
+- **日本語で書く**: コード内コメントは原則日本語で記述する
 - **不要なコメントは書かない**: 自明なコードにコメントは不要
-- **TODOコメント**: `// TODO: [担当者] 説明 (#Issue番号)` の形式
+- **公開APIを説明する**: クラス、公開メソッド、外部契約となる型には責務・前提条件・副作用を示すコメントを付ける
+- **TODOコメント**: `TODO: AI 2026-03-26 説明 (#Issue番号)` の形式を基本とする
 - **複雑なロジック**: 業務ルール、正規表現、非自明なアルゴリズムにはコメント必須
 
 ### エラーハンドリング
@@ -124,9 +127,9 @@
 2. **分析** → 要件を理解し、`docs/spec/` に仕様書を作成
 3. **設計** → アーキテクチャを検討し、`docs/design/` に設計書を作成
 4. **計画** → 実装ステップを `docs/plan/` に作成
-5. **実装** → TDDサイクル（RED→GREEN→REFACTOR）で小さな単位でコーディング
+5. **実装** → TDDサイクル（RED→GREEN→REFACTOR）とコメント運用スキルで、小さな単位でコーディング
 6. **検証** → テスト実行、完了前検証スキルで証拠を確認
-7. **レビュー** → コードレビュー
+7. **レビュー** → コードレビューとコメント品質レビュー
 8. **振り返り** → ドキュメント更新、memory-bank更新
 
 ### コミットメッセージ規約（Conventional Commits）
