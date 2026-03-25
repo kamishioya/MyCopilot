@@ -21,6 +21,7 @@ my-copilot/
 │   └── migrations/                  #    マイグレーションスクリプト
 │
 ├── skills/                          # 🛠️ AIスキル定義
+│   ├── commenting/SKILL.md          #    コメント運用（WHY重視・日本語コメント）
 │   ├── create-spec/SKILL.md         #    仕様書作成
 │   ├── create-plan/SKILL.md         #    実装計画作成
 │   ├── context-map/SKILL.md         #    コンテキストマップ（影響範囲分析）
@@ -32,6 +33,7 @@ my-copilot/
 │
 ├── instructions/                    # 📏 自動適用されるコーディング規約
 │   ├── security.instructions.md     #    OWASP準拠セキュリティガイドライン
+│   ├── commenting.instructions.md   #    コメント運用ルール
 │   ├── code-review.instructions.md  #    コードレビュー基準
 │   └── update-docs.instructions.md  #    ドキュメント同期更新ルール
 │
@@ -70,6 +72,7 @@ my-copilot/
 | 実装計画の作成 | `create-plan` スキル → `docs/plan/` |
 | 実装前の影響範囲分析 | `context-map` スキル |
 | アーキテクチャ設計 | `architect` エージェント → `docs/design/` |
+| コード実装時のコメント品質統一 | `commenting` スキル |
 | コードレビュー | `code-review` スキル |
 | SQLレビュー | `sql-review` スキル |
 | リファクタリング | `refactor` スキル |
