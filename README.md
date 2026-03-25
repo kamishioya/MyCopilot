@@ -49,10 +49,7 @@ my-copilot/
 │   ├── techContext.md               #    技術スタック・環境情報
 │   ├── progress.md                  #    進捗状況・既知の問題
 │   └── tasks/                       #    タスク管理
-│       └── _index.md               #    タスクインデックス
-│
-└── temp/                            # 📝 AIタスク計画・一時ファイル
-    └── .gitkeep
+│       └── _index.md                #    タスクインデックス
 ```
 
 ## 使い方
